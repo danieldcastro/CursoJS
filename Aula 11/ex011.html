@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Sua Nacionalidade: <input type="text" name="txtNac" id="txtNac">
+    <input type="button" value="Enviar" id="botao" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        //var botao = document.querySelector('input#botao')
+        //botao.addEventListener('click', calcular)
+
+        function calcular() {
+            var txtpais = document.querySelector('input#txtNac')
+            var res = document.querySelector('div#res')
+            var pais = txtpais.value
+
+            res.innerHTML = `<p>Você vive em ${pais}</p>`
+            if (pais == 'Brasil' || pais == 'brasil' || pais == 'br') {
+                res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+            }
+        }
+
+    </script>
+</body>
+
+</html>
